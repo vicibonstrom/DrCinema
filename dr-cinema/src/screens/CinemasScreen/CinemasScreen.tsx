@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity } from 'react-native';
+import styles from './styles';
 
 interface Cinema {
   id: string;
@@ -53,31 +54,3 @@ const CinemasScreen: React.FC = () => {
 };
 
 export default CinemasScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: '#ffffff'
-  },
-  title: {
-    fontSize: 24,
-    marginBottom: 16,
-    fontWeight: 'bold'
-  },
-  cinemaItem: {
-    marginBottom: 12,
-    padding: 8,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 4
-  },
-  cinemaName: {
-    fontSize: 18,
-    fontWeight: '600'
-  },
-  cinemaWebsite: {
-    fontSize: 14,
-    color: '#555'
-  }
-});

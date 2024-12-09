@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import { useRouter } from 'expo-router';
+import styles from './styles';
 
 export default function HomePage() {
   const router = useRouter();
@@ -19,18 +20,3 @@ export default function HomePage() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    justifyContent: 'center', 
-    alignItems: 'center',
-    padding: 16,
-    backgroundColor: '#ffffff'
-  },
-  title: { 
-    fontSize: 24, 
-    marginBottom: 20,
-    fontWeight: 'bold'
-  },
-});
