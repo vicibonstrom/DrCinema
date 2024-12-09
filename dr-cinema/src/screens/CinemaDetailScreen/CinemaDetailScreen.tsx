@@ -1,6 +1,7 @@
 // src/screens/CinemaDetailScreen/CinemaDetailScreen.tsx
 import React from 'react';
-import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import { View, Text, FlatList, Image } from 'react-native';
+import styles from './styles';
 
 interface CinemaDetailScreenProps {
   cinemaId: string;
@@ -67,51 +68,3 @@ const CinemaDetailScreen: React.FC<CinemaDetailScreenProps> = ({ cinemaId }) => 
 };
 
 export default CinemaDetailScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: '#ffffff'
-  },
-  name: {
-    fontSize: 22,
-    fontWeight: '700',
-    marginBottom: 8
-  },
-  description: {
-    fontSize: 16,
-    marginBottom: 8
-  },
-  info: {
-    fontSize: 14,
-    marginBottom: 4
-  },
-  moviesTitle: {
-    fontSize: 20,
-    fontWeight: '600',
-    marginTop: 16,
-    marginBottom: 8
-  },
-  movieItem: {
-    flexDirection: 'row',
-    marginBottom: 12,
-    alignItems: 'center'
-  },
-  thumbnail: {
-    width: 50,
-    height: 50,
-    marginRight: 8
-  },
-  movieInfo: {
-    flexShrink: 1
-  },
-  movieName: {
-    fontSize: 16,
-    fontWeight: '600'
-  },
-  genres: {
-    fontSize: 14,
-    color: '#555'
-  }
-});
