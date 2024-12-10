@@ -2,7 +2,7 @@ import { Cinema } from '../types/cinema';
 
 export const getCinemas = async (apiKey: string): Promise<Cinema[]> => {
   try {
-  const response = await fetch('https://api.kvikmyndir.is/theaters', {
+    const response = await fetch('https://api.kvikmyndir.is/theaters', {
       headers: {
         'x-access-token': apiKey,
         'Content-Type': 'application/json',

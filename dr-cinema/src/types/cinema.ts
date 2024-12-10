@@ -1,7 +1,7 @@
 export interface Cinema {
     id: number;
     name: string;
-    address: string;
+    address: string;    // TODO:
     city: string;
     phone: string;
     website: string;
