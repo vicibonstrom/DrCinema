@@ -1,4 +1,4 @@
-export interface Theater {
+export interface Cinema {
     id: number;
     name: string;
     address: string;
@@ -9,4 +9,4 @@ export interface Theater {
     google_map: string;
 }
 
-export type Theaters = Theaters[];
+export type Cinemas = Cinema[];

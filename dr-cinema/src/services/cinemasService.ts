@@ -1,6 +1,6 @@
-import { Theater } from '../types/theater';
+import { Cinema } from '../types/cinema';
 
-export const getTheaters = async (apiKey: string): Promise<Theater[]> => {
+export const getCinemas = async (apiKey: string): Promise<Cinema[]> => {
   try {
   const response = await fetch('https://api.kvikmyndir.is/theaters', {
       headers: {
@@ -14,7 +14,7 @@ export const getTheaters = async (apiKey: string): Promise<Theater[]> => {
       throw new Error(`Error ${response.status}: ${errorText}`);
     }
 
-    const data: Theater[] = await response.json();
+    const data: Cinema[] = await response.json();
 
     if (!Array.isArray(data)) {
       throw new Error('Unexpected response format');
@@ -22,7 +22,7 @@ export const getTheaters = async (apiKey: string): Promise<Theater[]> => {
 
     return data;
   } catch (error) {
-    console.error('Error getting theaters:', error);
+    console.error('Error getting cinemas:', error);
     return [];
   }  
 };
