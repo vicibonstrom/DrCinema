@@ -3,6 +3,9 @@ import { View, Text, Button } from 'react-native';
 import { useRouter } from 'expo-router';
 import styles from './styles';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 export default function HomePage() {
   const router = useRouter();
 

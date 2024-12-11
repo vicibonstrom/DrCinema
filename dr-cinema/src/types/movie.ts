@@ -19,43 +19,6 @@ export interface Showtime {
   schedule: Schedule[];
 }
 
-export interface Movie {
-  _id: string;
-  id: number;
-  ids: {
-    imdb: string;
-    rotten: string | null;
-    tmdb: string | null;
-  };
-  title: string;
-  alternativeTitles: string;
-  year: string;
-  durationMinutes: number;
-  genres: Genre[];
-  poster: string;
-  actors_abridged: { name: string }[];
-  directors_abridged: { name: string }[];
-  ratings: {
-    imdb: string;
-    rotten_audience: string | null;
-    rotten_critics: string | null;
-  };
-  showtimes: Showtime[];
-  certificate: {
-    is: string;
-    color: string;
-    number: string;
-  };
-  trailers: Trailer[];
-  omdb: Omdb[];
-  plot: string;
-}
-
-export interface Trailer {
-  id: number;
-  results: TrailerResult[];
-}
-
 export interface TrailerResult {
   id: string;
   iso_639_1: string;
@@ -65,6 +28,11 @@ export interface TrailerResult {
   site: string;
   size: number;
   type: string;
+}
+
+export interface Trailer {
+  id: number;
+  results: TrailerResult[];
 }
 
 export interface Omdb {
@@ -103,4 +71,25 @@ export interface Omdb {
   Production: string;
   Website: string;
   Response: string;
+}
+
+export interface Movie {
+  _id: string;
+  id: number;
+  ids: {
+    imdb: string;
+    rotten: string | null;
+    tmdb: string | null;
+  };
+  title: string;
+  alternativeTitles: string;
+  year: string;
+  durationMinutes: number;
+  genres: Genre[];
+  poster: string;
+  actors_abridged: { name: string }[];
+  directors_abridged: { name: string }[];
+  trailers: Trailer[];
+  omdb: Omdb[];
+  plot: string;
 }
